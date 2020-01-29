@@ -1,0 +1,32 @@
+#include <iostream> 
+
+using namespace std;
+
+void an(int n)
+{
+	for(int i=1;i<=n;i++)
+	{
+		cout<<"sin("<<i;
+		if(i%2==0&&i!=n) cout<<"+";
+		if(i%2&&i!=n) cout<<"-";
+	}
+	for(int i=0;i<n;i++) cout<<")";
+}
+
+void sn(int n)
+{
+	for(int i=1;i<n;i++) cout<<"(";
+	for(int i=1;i<=n;i++)
+	{
+		an(i);
+		cout<<"+"<<n-i+1;
+		if(n-i) cout<<")";
+	}
+}
+int main()
+{
+	int n;
+	cin>>n;
+	sn(n);
+	return 0;
+ } 
